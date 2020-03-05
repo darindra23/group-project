@@ -1,5 +1,5 @@
 "use strict";
-const axios = require("../routes/node_modules/axios").default;
+const axios = require("axios").default;
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
