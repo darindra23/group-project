@@ -37,6 +37,7 @@ class Controller {
         }
       })
       .catch(err => {
+        console.log('sini');
         next(err);
       });
   }
