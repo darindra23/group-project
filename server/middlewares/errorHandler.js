@@ -7,7 +7,6 @@ module.exports = {
     } else if (err.message === "invalid token") {
       res.status(401).json(err);
     } else {
-      console.log(err.message);
       res.status(err.status || 500).json(err);
     }
   }

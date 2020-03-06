@@ -39,12 +39,16 @@ module.exports = (sequelize, DataTypes) => {
           return hashed(instance.password).then(hashed => {
             instance.password = hashed;
           });
+        },
+        beforeUpdate(instance, options) {
+          return hashed(instance.password).then(hashed => {
+            instance.password = hashed;
+          });
         }
       },
       sequelize
     }
   );
-
   User.associate = function(models) {
     // associations can be defined here
   };
