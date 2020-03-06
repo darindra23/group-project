@@ -93,6 +93,13 @@ function getPlayer(params) {
   });
 }
 
+$('#changePassword').on('submit', function(e){
+    e.preventDefault()
+    $password = $('#edit-password')
+
+    update($password.val())
+})
+
 function update(password) {
   $.ajax({
     type: "PUT",
